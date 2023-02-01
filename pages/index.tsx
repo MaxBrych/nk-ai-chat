@@ -21,10 +21,10 @@ const Home: NextPage = () => {
 
   const prompt =
     vibe === "Funny"
-      ? `Generate 2 funny twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure there is a joke in there and it's a little ridiculous. Make sure each generated bio is at max 20 words and base it on this context: ${bio}${
+      ? `Erstelle 2 witzige Twitter-Bios ohne Hashtags und mit klarer Beschriftung "1." und "2.". Achte darauf, dass es einen Witz gibt und er ein wenig lächerlich ist. Achten Sie darauf, dass die Biografien jeweils höchstens 20 Wörter lang sind, und bauen Sie sie auf diesem Kontext auf: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
-      : `Generate 2 ${vibe} twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure each generated bio is at least 14 words and at max 20 words and base them on this context: ${bio}${
+      : `Erstelle 2 ${vibe} Twitter-Bios ohne Hashtags und mit klarer Kennzeichnung "1." und "2.". Vergewissern Sie sich, dass jede erstellte Biografie mindestens 14 und höchstens 20 Wörter umfasst, und stützen Sie sie auf diesen Kontext: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`;
 
@@ -68,16 +68,16 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex flex-col items-center justify-center max-w-5xl min-h-screen py-2 mx-auto">
       <Head>
         <title>Twitter Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-4 mt-12 text-center sm:mt-20">
         <a
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
+          className="flex items-center justify-center px-4 py-2 mb-5 space-x-2 text-sm text-gray-600 transition-colors bg-white border border-gray-300 rounded-full shadow-md max-w-fit hover:bg-gray-100"
           href="https://github.com/Nutlope/twitterbio"
           target="_blank"
           rel="noopener noreferrer"
@@ -85,12 +85,12 @@ const Home: NextPage = () => {
           <Github />
           <p>Star on GitHub</p>
         </a>
-        <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
+        <h1 className="max-w-2xl text-4xl font-bold sm:text-6xl text-slate-900">
           Generate your next Twitter bio in seconds
         </h1>
-        <p className="text-slate-500 mt-5">18,167 bios generated so far.</p>
-        <div className="max-w-xl w-full">
-          <div className="flex mt-10 items-center space-x-3">
+        <p className="mt-5 text-slate-500">18,167 bios generated so far.</p>
+        <div className="w-full max-w-xl">
+          <div className="flex items-center mt-10 space-x-3">
             <Image
               src="/1-black.png"
               width={30}
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="mb-5 sm:mb-0"
             />
-            <p className="text-left font-medium">
+            <p className="font-medium text-left">
               Copy your current bio{" "}
               <span className="text-slate-500">
                 (or write a few sentences about yourself)
@@ -110,14 +110,14 @@ const Home: NextPage = () => {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            className="w-full my-5 border-gray-300 rounded-md shadow-sm focus:border-black focus:ring-black"
             placeholder={
               "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
             }
           />
-          <div className="flex mb-5 items-center space-x-3">
+          <div className="flex items-center mb-5 space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="font-medium text-left">Select your vibe.</p>
           </div>
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
@@ -125,7 +125,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="w-full px-4 py-2 mt-8 font-medium text-white bg-black rounded-xl sm:mt-10 hover:bg-black/80"
               onClick={(e) => generateBio(e)}
             >
               Generate your bio &rarr;
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
           )}
           {loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="w-full px-4 py-2 mt-8 font-medium text-white bg-black rounded-xl sm:mt-10 hover:bg-black/80"
               disabled
             >
               <LoadingDots color="white" style="large" />
@@ -148,22 +148,22 @@ const Home: NextPage = () => {
         <hr className="h-px bg-gray-700 border-1 dark:bg-gray-700" />
         <ResizablePanel>
           <AnimatePresence mode="wait">
-            <motion.div className="space-y-10 my-10">
+            <motion.div className="my-10 space-y-10">
               {generatedBios && (
                 <>
                   <div>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
+                    <h2 className="mx-auto text-3xl font-bold sm:text-4xl text-slate-900">
                       Your generated bios
                     </h2>
                   </div>
-                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+                  <div className="flex flex-col items-center justify-center max-w-xl mx-auto space-y-8">
                     {generatedBios
                       .substring(generatedBios.indexOf("1") + 3)
                       .split("2.")
                       .map((generatedBio) => {
                         return (
                           <div
-                            className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                            className="p-4 transition bg-white border shadow-md rounded-xl hover:bg-gray-100 cursor-copy"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedBio);
                               toast("Bio copied to clipboard", {
