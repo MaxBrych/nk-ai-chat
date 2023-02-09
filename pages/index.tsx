@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const prompt =
     vibe === "Funny"
-      ? `Explain the following code to me: ${bio}${
+      ? `Erstelle eine Zusammenfassung für den folgenden Text: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
       : `Erstelle 2 ${vibe} Twitter-Bios ohne Hashtags und mit klarer Kennzeichnung "1." und "2.". Vergewissern Sie sich, dass jede erstellte Biografie mindestens 14 und höchstens 20 Wörter umfasst, und stützen Sie sie auf diesen Kontext: ${bio}${
@@ -86,7 +86,7 @@ const Home: NextPage = () => {
           <p>Star on GitHub</p>
         </a>
         <h1 className="max-w-2xl text-4xl font-bold sm:text-6xl text-slate-900">
-          Generate your next Twitter bio in seconds
+          Nordkurier Artikel zusammenfassen
         </h1>
         <p className="mt-5 text-slate-500">18,167 bios generated so far.</p>
         <div className="w-full max-w-xl">
