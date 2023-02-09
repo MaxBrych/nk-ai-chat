@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const prompt =
     vibe === "Funny"
-      ? `Erstelle 2 witzige Twitter-Bios ohne Hashtags und mit klarer Beschriftung "1." und "2.". Achte darauf, dass es einen Witz gibt und er ein wenig lächerlich ist. Achten Sie darauf, dass die Biografien jeweils höchstens 20 Wörter lang sind, und bauen Sie sie auf diesem Kontext auf: ${bio}${
+      ? `Explain the following code to me: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
       : `Erstelle 2 ${vibe} Twitter-Bios ohne Hashtags und mit klarer Kennzeichnung "1." und "2.". Vergewissern Sie sich, dass jede erstellte Biografie mindestens 14 und höchstens 20 Wörter umfasst, und stützen Sie sie auf diesen Kontext: ${bio}${
