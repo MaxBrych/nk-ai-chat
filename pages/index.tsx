@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const prompt =
     vibe === "Funny"
-      ? `Erstelle eine Zusammenfassung für den folgenden Text: ${bio}${
+      ? `Fassen Sie dies für einen Schüler der zweiten Klasse zusammen und beziehen sie sich nur auf die für den Kontext relevanten Informationen: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
       : `Erstelle 2 ${vibe} Twitter-Bios ohne Hashtags und mit klarer Kennzeichnung "1." und "2.". Vergewissern Sie sich, dass jede erstellte Biografie mindestens 14 und höchstens 20 Wörter umfasst, und stützen Sie sie auf diesen Kontext: ${bio}${
