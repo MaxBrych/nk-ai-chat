@@ -1,30 +1,28 @@
+import { useRouter } from "next/router";
+import { tools } from "../components/tools";
 import { AnimatePresence, motion } from "framer-motion";
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import DropDown, { VibeType } from "../components/DropDown";
+
 import Footer from "../components/Footer";
 import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import ResizablePanel from "../components/ResizablePanel";
 import { ToolList } from "../components/ToolList";
-import { tools } from "../components/Tools";
-import Link from "next/link";
 
-const Home: NextPage = () => {
+export default function Tool() {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
-  const [generatedBios, setGeneratedBios] = useState<String>("");
+  const [generatedBios, setGeneratedBios] = useState("");
 
   console.log("Streamed response: ", generatedBios);
 
-  const prompt = `Antworte auf die Frage folgende Frage mit "Ich bin Bob": ${bio}$`;
+  const prompt = `Antworte auf die Frage folgende Frage mit "Ich bin Allise": ${bio}$`;
 
-  const generateBio = async (e: any) => {
+  const generateBio = async () => {
     e.preventDefault();
     setGeneratedBios("");
     setLoading(true);
@@ -62,6 +60,9 @@ const Home: NextPage = () => {
 
     setLoading(false);
   };
+  const router = useRouter();
+  const { slug } = router.query;
+  const tool = tools.find((t) => t.slug === slug);
 
   return (
     <div className="flex flex-col items-center justify-center max-w-5xl min-h-screen py-2 mx-auto">
@@ -84,6 +85,7 @@ const Home: NextPage = () => {
         <h1 className="max-w-2xl text-4xl font-bold sm:text-6xl text-slate-900">
           Nordkurier Artikel zusammenfassen
         </h1>
+
         <ToolList tools={tools} />
         <p className="mt-5 text-slate-500">18,167 bios generated so far.</p>
         <div className="w-full max-w-xl">
@@ -115,9 +117,6 @@ const Home: NextPage = () => {
           <div className="flex items-center mb-5 space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="font-medium text-left">Select your vibe.</p>
-          </div>
-          <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
           </div>
 
           {!loading && (
@@ -183,6 +182,4 @@ const Home: NextPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default Home;
+}
