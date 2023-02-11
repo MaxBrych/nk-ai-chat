@@ -21,7 +21,8 @@
     "**/*.tsx",
     "components/Tools.js",
     "components/ToolList.jsx",
-    "pages/[slug]/[slug].jsx"
+    "pages/[slug]/[slug].jsx",
+    "pages/[slug].jsx"
   ],
   "exclude": ["node_modules"]
 }
