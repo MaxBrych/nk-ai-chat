@@ -3,18 +3,15 @@ import Link from "next/link";
 import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../../components/DropDown";
 import Footer from "../../components/Footer";
-import Github from "../../components/GitHub";
 import Header from "../../components/Header";
 import LoadingDots from "../../components/LoadingDots";
 import ResizablePanel from "../../components/ResizablePanel";
-import ToolList from "../../components/ToolList";
 
 interface ToolPageProps {
   tool: ToolProps;
@@ -28,7 +25,9 @@ const ToolPage: React.FC<ToolPageProps> = ({ tool }) => {
 
   console.log("Streamed response: ", generatedBios);
 
-  const prompt = `Antworte auf die Frage folgende Frage mit "Ich bin Bob": ${bio}$`;
+  const toolPrompt = tool.toolPrompt;
+
+  const prompt = `${toolPrompt}$ ${bio}$`;
 
   const generateBio = async (e: any) => {
     e.preventDefault();
