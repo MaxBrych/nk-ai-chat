@@ -58,7 +58,8 @@ export const tools: ToolProps[] = [
     id: 6,
     description: "Tool 3 description",
     slug: "tool-6",
-    toolPrompt: "Erstellen Sie eine Analogie zu diesem Satz:",
+    toolPrompt:
+      "Erstellen Sie eine passende Analogie zum folgendem Satz die beide genannten Wörter beinhalten muss:",
     icon: "/../public/icons/question.png",
   },
 ];

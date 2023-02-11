@@ -87,7 +87,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
                   <div className="flex flex-col items-start justify-start max-w-xl mx-auto space-y-8">
                     {generatedBios
                       //.substring(generatedBios.indexOf("1") + 3)
-                      .split("2.")
+                      .split("3.")
                       .map((generatedBio) => {
                         return (
                           <div
