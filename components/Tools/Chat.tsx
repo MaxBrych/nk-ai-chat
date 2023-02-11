@@ -72,7 +72,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
       </div>
       {/**/}
       <div />
-      <div className="w-full h-full border border-dark-70 ">
+      <div className="w-full h-full pb-4">
         <Toaster
           position="top-center"
           reverseOrder={false}
@@ -84,19 +84,14 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
             <motion.div className="my-10 space-y-10">
               {generatedBios && (
                 <>
-                  <div>
-                    <h2 className="mx-auto text-3xl font-bold sm:text-4xl text-slate-900">
-                      Dein generierter Text
-                    </h2>
-                  </div>
-                  <div className="flex flex-col items-center justify-center max-w-xl mx-auto space-y-8">
+                  <div className="flex flex-col items-start justify-start max-w-xl mx-auto space-y-8">
                     {generatedBios
-                      .substring(generatedBios.indexOf("1") + 3)
+                      //.substring(generatedBios.indexOf("1") + 3)
                       .split("2.")
                       .map((generatedBio) => {
                         return (
                           <div
-                            className="p-4 transition bg-white border shadow-md rounded-xl hover:bg-gray-100 cursor-copy"
+                            className="p-4 transition border shadow-md bg-dark-95 rounded-xl hover:bg-gray-100 cursor-copy"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedBio);
                               toast("Bio copied to clipboard", {
@@ -105,7 +100,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
                             }}
                             key={generatedBio}
                           >
-                            <p>{generatedBio}</p>
+                            <p className="text-left">{generatedBio}</p>
                           </div>
                         );
                       })}
