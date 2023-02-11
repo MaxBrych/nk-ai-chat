@@ -29,7 +29,7 @@ export const tools: ToolProps[] = [
     description: "Tool 3 description",
     slug: "tool-3",
     toolPrompt:
-      "Fassen Sie dies für einen Schüler der zweiten Klasse zusammen:\n\nJupiter ist der fünfte Planet der Sonne und der größte im Sonnensystem. Er ist ein Gasriese mit einer Masse, die ein Tausendstel der der Sonne beträgt, aber zweieinhalb Mal so groß ist wie die aller anderen Planeten des Sonnensystems zusammen. Jupiter ist eines der hellsten Objekte, die mit bloßem Auge am Nachthimmel zu sehen sind, und war den alten Zivilisationen schon vor der Aufzeichnung der Geschichte bekannt. Er ist nach dem römischen Gott Jupiter benannt.[19] Von der Erde aus gesehen kann Jupiter so hell sein, dass sein reflektiertes Licht sichtbare Schatten wirft,[20] und ist im Durchschnitt das dritthellste natürliche Objekt am Nachthimmel nach dem Mond und der Venus.:",
+      "Fassen Sie den folgenden Text kurz zusammen und sodass die für den Kontext des Textes wichtigen Informationen beinhaltet sind:",
   },
   {
     name: "Übersetzer",
