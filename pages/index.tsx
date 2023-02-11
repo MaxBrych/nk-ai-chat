@@ -11,7 +11,7 @@ import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import ResizablePanel from "../components/ResizablePanel";
 import { ToolList } from "../components/ToolList";
-import { tools } from "../components/Tools";
+import tools from "../components/Tools";
 import Link from "next/link";
 
 const Home: NextPage = () => {

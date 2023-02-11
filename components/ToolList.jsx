@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import tools from "./Tools";
 
 export const ToolList = ({ tools }) => {
-  console.log("Tools: ", tools);
   return (
     <>
       {tools.map((tool) => {
         return (
-          <div>
+          <div key={tool.id}>
             <Link href="/[slug]" as={`/${tool.slug}`}>
               {tool.name}
             </Link>

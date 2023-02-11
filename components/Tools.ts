@@ -1,4 +1,11 @@
-export const tools = [
+interface Tool {
+  name: string;
+  id: number;
+  description: string;
+  slug: string;
+}
+
+const tools: Tool[] = [
   {
     name: "Tool 1",
     id: 1,
@@ -18,3 +25,5 @@ export const tools = [
     slug: "tool-3",
   },
 ];
+
+export default tools;
