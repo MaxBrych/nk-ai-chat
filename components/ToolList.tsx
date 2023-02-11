@@ -13,9 +13,10 @@ const ToolList: React.FC<ToolListProps> = ({ tools }) => (
           href="/tools/[slug]"
           as={`/tools/${tool.slug}`}
           key={tool.id}
-          className="flex items-start justify-start p-4 border cursor-pointer flex-vertical border-slate-300 hover:bg-slate-50 rounded-xl"
+          className="items-start justify-start p-4 border cursor-pointer border-slate-300 hover:bg-slate-50 rounded-xl"
         >
-          {tool.name}
+          <h1 className="text-lg text-semibold">{tool.name}</h1>
+          <p>{tool.description}</p>
         </Link>
       ))}
     </div>
