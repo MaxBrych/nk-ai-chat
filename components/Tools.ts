@@ -1,11 +1,11 @@
-interface Tool {
+export interface ToolProps {
   name: string;
   id: number;
   description: string;
   slug: string;
 }
 
-const tools: Tool[] = [
+export const tools: ToolProps[] = [
   {
     name: "Tool 1",
     id: 1,
@@ -25,5 +25,3 @@ const tools: Tool[] = [
     slug: "tool-3",
   },
 ];
-
-export default tools;

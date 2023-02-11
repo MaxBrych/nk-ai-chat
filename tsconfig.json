@@ -20,9 +20,9 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Tools.ts",
-    "components/ToolList.jsx",
+    "components/ToolList.tsx",
     "pages/[slug]/[slug].jsx",
-    "pages/[slug].tsx"
+    "pages/tools/[slug].tsx"
   ],
   "exclude": ["node_modules"]
 }
