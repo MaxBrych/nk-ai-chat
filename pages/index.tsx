@@ -13,6 +13,7 @@ import ResizablePanel from "../components/ResizablePanel";
 import ToolList from "../components/ToolList";
 import { tools } from "../components/Tools";
 import Link from "next/link";
+import { Main } from "../components/Main";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -64,21 +65,18 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 mx-auto">
-      <Head>
-        <title>Twitter Generator</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header />
-      <main className="flex flex-col items-center justify-start flex-1 w-full max-w-5xl px-4 mt-4 text-center sm:mt-20">
-        <h1 className="max-w-2xl text-4xl font-bold sm:text-6xl text-slate-900">
-          Nordkurier Artikel zusammenfassen
-        </h1>
-        <ToolList tools={tools} />
-        <p className="mt-5 text-slate-500">18,167 bios generated so far.</p>
-      </main>
-      <Footer />
+    <div className="flex flex-col items-center justify-center min-h-screen mx-auto bg-dark-95">
+      <div className="w-full min-h-screen">
+        <Head>
+          <title>Nordkurier AI-Tool</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="flex flex-col justify-between w-full min-h-screen lg:max-w-5xl">
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

@@ -10,7 +10,8 @@ import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../../components/DropDown";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Translator from "../../components/Tools/Translator";
+import Chat from "../../components/Tools/Chat";
+import Subheader from "../../components/Subheader";
 
 interface ToolPageProps {
   tool: ToolProps;
@@ -23,15 +24,15 @@ const ToolPage: React.FC<ToolPageProps> = ({ tool }) => {
         <title>Twitter Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-4 mt-12 text-center sm:mt-20">
-        <Link href="/" as={`/`}>
-          Go back
-        </Link>
-        <h1>{tool.name}</h1>
-        <p>{tool.description}</p>
-        <Translator tool={tool} />
-      </main>
+      <div className="w-full min-h-screen">
+        <div className="flex flex-col justify-between w-full min-h-screen lg:max-w-5xl">
+          <div>
+            <Header />
+            <Subheader tool={tool} />
+          </div>
+          <Chat tool={tool} />
+        </div>
+      </div>
     </>
   );
 };
