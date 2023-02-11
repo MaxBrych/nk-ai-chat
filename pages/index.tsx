@@ -19,14 +19,7 @@ const Home: NextPage = () => {
 
   console.log("Streamed response: ", generatedBios);
 
-  const prompt =
-    vibe === "Funny"
-      ? `Erstelle 2 Zusammenfassungen für einen Schüler der zweiten Klasse zum folgendem Text und beziehen sie sich nur auf die für den Kontext relevanten Informationen: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`
-      : `Erstelle 2 ${vibe} für den Kontext relevante Zusammenfassungen für einen Schüler der zweiten Klasse zum folgendem Text: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`;
+  const prompt = `Antworte auf die Frage folgende Frage mit "Ich bin Bob": ${bio}$`;
 
   const generateBio = async (e: any) => {
     e.preventDefault();
