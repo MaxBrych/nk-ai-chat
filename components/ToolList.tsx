@@ -20,7 +20,7 @@ const ToolList: React.FC<ToolListProps> = ({ tools }) => (
             <Image src={tool.icon} alt={tool.name} width={32} height={32} />
           </div>
           <div>
-            <h1 className="text-sm font-semibold leading-4 md:text-base md:text-left">
+            <h1 className="text-xs line-clamp-1 font-semibold leading-4 md:text-base md:text-left">
               {tool.name}
             </h1>
             <p className="invisible text-sm md:text-left md:visible">

@@ -12,10 +12,12 @@ const Subheader: React.FC<ToolPageProps> = ({ tool }) => {
     <header className="flex items-center justify-between w-full px-4 bg-white border-b lg:max-w-5xl h-14 lg:rounded-t-lg border-dark-95 sm:px-4">
       <Link
         href={"/"}
-        className="flex items-center justify-center border rounded-full h-9 w-9 border-dark-90 md:w-11 md:h-11"
+        className="flex items-center justify-center border rounded-full h-9 w-9 border-dark-90 hover:bg-dark-90 md:w-11 md:h-11"
       >
         <Image
-          src={"/../public/icons/chevron.png"}
+          src={
+            "https://drive.google.com/uc?export=view&id=1bxXQP9_KHXoOE-ygEfE7M1HrC3rBMEDh"
+          }
           width={24}
           height={24}
           alt={""}

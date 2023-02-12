@@ -66,7 +66,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen mx-auto bg-dark-95">
-      <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen flex justify-center items-center">
         <Head>
           <title>Nordkurier AI-Tool</title>
           <link rel="icon" href="/favicon.ico" />

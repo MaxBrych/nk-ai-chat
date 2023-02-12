@@ -66,11 +66,11 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
   return (
     <main className="flex flex-col items-end justify-end flex-1 w-full h-full max-w-5xl px-4 pt-6 text-center bg-white sm:mt-20">
       {/* DROPDOWN */}
-
       <div className="hidden">
         <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
       </div>
       {/**/}
+
       <div />
       <div className="w-full h-full pb-4">
         <Toaster
@@ -91,7 +91,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
                       .map((generatedBio) => {
                         return (
                           <div
-                            className="p-4 transition border shadow-md bg-dark-95 rounded-xl hover:bg-gray-100 cursor-copy"
+                            className="p-4 transition shadow-md bg-dark-95 rounded-xl hover:bg-gray-100 cursor-pointer"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedBio);
                               toast("Bio copied to clipboard", {
@@ -111,18 +111,21 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
           </AnimatePresence>
         </ResizablePanel>
       </div>
+
+      {/* INPUT */}
       <div className="flex flex-row items-end justify-start w-full gap-4 mb-8">
         <textarea
           value={bio}
+          //onKeyPress={(e) => generateBio(e)}
           onChange={(e) => setBio(e.target.value)}
           rows={1}
-          className="w-full h-12 border-gray-300 rounded-md shadow-sm focus:border-black focus:ring-black"
-          placeholder={"Dein text hier..."}
+          className="w-full h-12 border-dark-95 bg-dark-95 rounded-lg shadow-sm focus:border-cyan-50 focus:ring-cyan-30"
+          placeholder={"Dein Text hier..."}
         />
 
         {!loading && (
           <button
-            className="w-12 h-12 px-4 py-2 font-medium text-white bg-black rounded-full sm:mt-10 hover:bg-black/80"
+            className="w-12 h-12 flex justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
             onClick={(e) => generateBio(e)}
           >
             &rarr;
@@ -130,7 +133,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
         )}
         {loading && (
           <button
-            className="w-12 h-12 px-4 py-2 font-medium text-white bg-black rounded-full sm:mt-10 hover:bg-black/80"
+            className="w-12 h-12 flex justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
             disabled
           >
             <LoadingDots color="white" style="large" />
