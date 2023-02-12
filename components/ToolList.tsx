@@ -8,7 +8,7 @@ interface ToolListProps {
 
 const ToolList: React.FC<ToolListProps> = ({ tools }) => (
   <>
-    <div className="grid w-full grid-cols-3 px-4 py-4 md:space-x-4 md:space-y-4">
+    <div className="grid w-full grid-cols-3  py-4 md:space-x-4 md:space-y-4">
       {tools.map((tool) => (
         <Link
           href="/tools/[slug]"

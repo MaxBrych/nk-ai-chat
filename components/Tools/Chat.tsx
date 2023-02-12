@@ -125,7 +125,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
 
         {!loading && (
           <button
-            className="w-12 h-12 flex justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
+            className="w-12 h-12 flex flex-1 justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
             onClick={(e) => generateBio(e)}
           >
             &rarr;
@@ -133,7 +133,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
         )}
         {loading && (
           <button
-            className="w-12 h-12 flex justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
+            className="w-12 h-12 flex flex-1 justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
             disabled
           >
             <LoadingDots color="white" style="large" />
