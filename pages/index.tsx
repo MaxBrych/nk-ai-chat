@@ -6,14 +6,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Main } from "../components/Main";
 import Sidebar from "../components/Sidebar";
-import { tools } from "../components/Tools";
+import { ToolProps, tools } from "../components/Tools";
+import Chat from "../components/Tools/Chat";
 
 const Home: NextPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen mx-auto ">
       <div className="w-full min-h-screen flex justify-center items-center ">
         <Head>
-          <title>Nordkurier AI-Tool</title>
+          <title>Nordkurier KI-Chat</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className=" flex flex-col justify-between md:justify-center w-full min-h-screen lg:max-w-5xl">

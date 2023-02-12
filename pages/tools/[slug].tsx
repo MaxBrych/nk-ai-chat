@@ -21,7 +21,7 @@ const ToolPage: React.FC<ToolPageProps> = ({ tool }) => {
   return (
     <>
       <Head>
-        <title>Twitter Generator</title>
+        <title>Nordkurier KI-Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen ">
