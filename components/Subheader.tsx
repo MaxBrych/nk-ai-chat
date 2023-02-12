@@ -9,7 +9,7 @@ interface ToolPageProps {
 
 const Subheader: React.FC<ToolPageProps> = ({ tool }) => {
   return (
-    <header className="flex items-center justify-between w-full px-4 bg-white border-b lg:max-w-5xl h-14 lg:rounded-t-lg border-dark-95 sm:px-4">
+    <header className="flex items-center justify-between w-full px-4 bg-white border-b lg:max-w-5xl h-14  border-dark-95 sm:px-4">
       <Link
         href={"/"}
         className="flex items-center justify-center border rounded-full h-9 w-9 border-dark-90 hover:bg-dark-90 md:w-11 md:h-11"

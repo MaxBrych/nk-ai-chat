@@ -65,18 +65,21 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mx-auto bg-dark-95">
-      <div className="w-full min-h-screen flex justify-center items-center">
+    <div className="flex flex-col items-center justify-center min-h-screen mx-auto ">
+      <div className="w-full min-h-screen flex justify-center items-center ">
         <Head>
           <title>Nordkurier AI-Tool</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="flex flex-col justify-between w-full min-h-screen lg:max-w-5xl">
+        <div className=" flex flex-col justify-between md:justify-center w-full min-h-screen lg:max-w-5xl">
           <Header />
           <Main />
           <Footer />
         </div>
       </div>
+      <div className="absolute w-2/3 left-0 top-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-30 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div className="absolute w-2/3 right-0 bottom-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-30 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div className="absolute w-full mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-90 opacity-30 h-full light:mix-blend-multiply filter blur-3xl animate-blob"></div>
     </div>
   );
 };

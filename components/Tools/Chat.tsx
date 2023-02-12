@@ -64,7 +64,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
     setLoading(false);
   };
   return (
-    <main className="flex flex-col items-end justify-end flex-1 w-full h-full max-w-5xl px-4 pt-6 text-center bg-white sm:mt-20">
+    <main className="flex flex-col items-end justify-end flex-1 w-full h-full md:flex-auto max-w-5xl px-4 pt-6 text-center bg-white md:rounded-b-xl md:h-3/4">
       {/* DROPDOWN */}
       <div className="hidden">
         <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
@@ -113,19 +113,19 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
       </div>
 
       {/* INPUT */}
-      <div className="flex flex-row items-end justify-start w-full gap-4 mb-8">
+      <div className="flex flex-row items-end justify-start w-full gap-1 md:gap-4 mb-4">
         <textarea
           value={bio}
           //onKeyPress={(e) => generateBio(e)}
           onChange={(e) => setBio(e.target.value)}
           rows={1}
-          className="w-full h-12 border-dark-95 bg-dark-95 rounded-lg shadow-sm focus:border-cyan-50 focus:ring-cyan-30"
+          className="w-full flex items-center justify-start flex-1 overflow-hidden  h-12 md:h-14 border-dark-95 bg-dark-95 rounded-full shadow-sm hover:bg-dark-90 focus:border-dark-70 focus:ring-cyan-50"
           placeholder={"Dein Text hier..."}
         />
 
         {!loading && (
           <button
-            className="w-12 h-12 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
+            className="w-12 h-12 md:h-14 md:w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
             onClick={(e) => generateBio(e)}
           >
             &rarr;
@@ -133,7 +133,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
         )}
         {loading && (
           <button
-            className="w-12 h-12 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
+            className="w-12 h-12 md:h-14 md:w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
             disabled
           >
             <LoadingDots color="white" style="large" />

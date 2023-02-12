@@ -24,8 +24,8 @@ const ToolPage: React.FC<ToolPageProps> = ({ tool }) => {
         <title>Twitter Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col items-center justify-center min-h-screen mx-auto bg-dark-95">
-        <div className="flex flex-col justify-between w-full min-h-screen lg:max-w-5xl">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-dark-95">
+        <div className="flex flex-col justify-between md:justify-center w-full min-h-screen md:h-3/4  lg:max-w-5xl">
           <div>
             <Header />
             <Subheader tool={tool} />
