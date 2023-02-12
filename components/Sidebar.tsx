@@ -6,7 +6,7 @@ interface ToolListProps {
   tools: ToolProps[];
 }
 
-const ToolList: React.FC<ToolListProps> = ({ tools }) => (
+const Sidebar: React.FC<ToolListProps> = ({ tools }) => (
   <>
     <h3 className="text-lg font-bold tracking-tight mb-2 md:mb-4 md:text-xl md:font-bold">
       Tools
@@ -36,4 +36,4 @@ const ToolList: React.FC<ToolListProps> = ({ tools }) => (
   </>
 );
 
-export default ToolList;
+export default Sidebar;
