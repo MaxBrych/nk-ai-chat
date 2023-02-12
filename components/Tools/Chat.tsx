@@ -64,7 +64,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
     setLoading(false);
   };
   return (
-    <main className="flex flex-col items-end justify-end flex-1 w-full h-full md:flex-auto max-w-5xl px-4 pt-6 text-center bg-white md:rounded-b-xl md:h-3/4">
+    <main className="flex flex-col items-end justify-end flex-1 w-full h-full md:flex-auto max-w-5xl px-4 pt-6 text-center md:rounded-b-xl md:h-3/4">
       {/* DROPDOWN */}
       <div className="hidden">
         <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />

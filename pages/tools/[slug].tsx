@@ -32,9 +32,9 @@ const ToolPage: React.FC<ToolPageProps> = ({ tool }) => {
           </div>
           <Chat tool={tool} />
         </div>
-        <div className="absolute w-2/3 left-0 top-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-30 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute w-2/3 right-0 bottom-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-30 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute w-full mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-90 opacity-30 h-full light:mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute w-2/3 left-0 top-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-20 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute w-2/3 right-0 bottom-0 mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-80 opacity-20 h-1/3 light:mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute w-full mr-4 -z-10 rounded-full bg-primary-100 bg-cyan-90 opacity-20 h-full light:mix-blend-multiply filter blur-3xl animate-blob"></div>
       </div>
     </>
   );
