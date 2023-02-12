@@ -91,10 +91,10 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
                       .map((generatedBio) => {
                         return (
                           <div
-                            className="p-4 transition shadow-md bg-dark-95 rounded-xl hover:bg-gray-100 cursor-pointer"
+                            className="p-4 transition  bg-dark-95 rounded-3xl hover:bg-gray-100 cursor-pointer"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedBio);
-                              toast("Bio copied to clipboard", {
+                              toast("Text wurde kopiert", {
                                 icon: "✂️",
                               });
                             }}
@@ -125,7 +125,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
 
         {!loading && (
           <button
-            className="w-12 h-12 md:h-14 md:w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
+            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
             onClick={(e) => generateBio(e)}
           >
             &rarr;
@@ -133,7 +133,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
         )}
         {loading && (
           <button
-            className="w-12 h-12 md:h-14 md:w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
+            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
             disabled
           >
             <LoadingDots color="white" style="large" />
