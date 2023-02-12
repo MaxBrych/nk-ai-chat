@@ -64,7 +64,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
     setLoading(false);
   };
   return (
-    <main className="flex flex-col items-end justify-end flex-1 w-full h-full md:flex-auto max-w-5xl px-4 pt-6 text-center md:rounded-b-xl md:h-3/4">
+    <main className="flex bg-white flex-col items-end justify-end flex-1 w-full h-full md:flex-auto max-w-5xl px-4 md:px-12 pt-6 text-center md:rounded-b-xl md:h-3/4">
       {/* DROPDOWN */}
       <div className="hidden">
         <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
@@ -119,13 +119,13 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
           //onKeyPress={(e) => generateBio(e)}
           onChange={(e) => setBio(e.target.value)}
           rows={1}
-          className="w-full flex items-center justify-start flex-1 overflow-hidden  h-12 md:h-14 border-dark-95 bg-dark-95 rounded-full shadow-sm hover:bg-dark-90 focus:border-dark-70 focus:ring-cyan-50"
+          className="w-full flex items-center justify-center md:p-4 leading-4 placeholder:text-sm resize-none flex-1 overflow-hidden  h-12 md:h-14 border-cyan-95 bg-cyan-95 rounded-full shadow-sm hover:bg-cyan-95 focus:border-cyan-95 focus:ring-cyan-95"
           placeholder={"Dein Text hier..."}
         />
 
         {!loading && (
           <button
-            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-black/80"
+            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-40"
             onClick={(e) => generateBio(e)}
           >
             &rarr;
@@ -133,7 +133,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
         )}
         {loading && (
           <button
-            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-50"
+            className="h-14 w-14 flex flex-none justify-center items-center font-medium text-white bg-cyan-50 rounded-full sm:mt-10 hover:bg-cyan-40"
             disabled
           >
             <LoadingDots color="white" style="large" />
