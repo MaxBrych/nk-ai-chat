@@ -81,7 +81,7 @@ const Chat: React.FC<ChatPageProps> = ({ tool }) => {
 
         <ResizablePanel>
           <AnimatePresence mode="wait">
-            <motion.div className="my-10 space-y-10">
+            <motion.div className="my-10 space-y-10 flex justify-start items-start">
               {generatedBios && (
                 <>
                   <div className="flex flex-col items-start justify-start max-w-xl mx-auto space-y-8">
